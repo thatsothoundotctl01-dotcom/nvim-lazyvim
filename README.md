@@ -3,7 +3,7 @@ A clean and modern Neovim configuration based on LazyVim.
 
 This setup is designed to make coding faster and more comfortable with a nice UI, useful plugins, and a smooth development workflow.e
 
-![Neovim setup preview](https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80)
+![Neovim setup preview](https://kommodo.ai/i/moKMgocDNhPe4ox4yZEz)
 
 ## Features
 
@@ -135,9 +135,6 @@ Common fixes:
 - Check if your font is installed
 - Reopen the editor after plugin install
 
-## Screenshot
-
-![LazyVim in action](https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80)
 
 ## Notes
 

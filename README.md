@@ -25,12 +25,6 @@ Before you start, make sure you have:
 
 ## Install Neovim
 
-### macOS
-
-```bash
-brew install neovim
-```
-
 ### Ubuntu / Debian
 
 ```bash
@@ -59,9 +53,10 @@ Then set it in your terminal app.
 1. Back up your current Neovim config if you already have one:
 
 ```bash
-mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
+mv ~/.config/nvim ~/.config/nvim.bak 2>/dev/null
+mv ~/.local/share/nvim ~/.local/share/nvim.bak 2>/dev/null
+mv ~/.local/state/nvim ~/.local/state/nvim.bak 2>/dev/null
+mv ~/.cache/nvim ~/.cache/nvim.bak 2>/dev/null
 ```
 
 2. Clone this repository as your Neovim config:

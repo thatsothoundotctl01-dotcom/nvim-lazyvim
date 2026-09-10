@@ -1,56 +1,55 @@
-# nvim-lazyvim 
-A clean and modern Neovim configuration based on LazyVim.
+# 💤 Neovim 
 
-This setup is designed to make coding faster and more comfortable with a nice UI, useful plugins, and a smooth development workflow.e
+A clean and modern Neovim configuration based on [LazyVim](https://www.lazyvim.org/).
 
-![Neovim setup preview](https://kommodo.ai/i/moKMgocDNhPe4ox4yZEz)
+Designed to make coding faster and more comfortable — with a polished UI, curated plugins, and a smooth day-to-day workflow.
 
-## Features
 
-- LazyVim base configuration
-- Fast startup with lazy plugin loading
-- File explorer, fuzzy search, and search/replace tools
-- LSP support for code completion and diagnostics
-- Beautiful theme and UI
-- Easy customization for your own workflow
+## ✨ Features
 
-## Requirements
+- ⚡ **Fast startup** with lazy-loaded plugins
+- 🗂️ File explorer, fuzzy search, and search/replace tools
+- 🧠 Built-in **LSP** support — completion, diagnostics, code actions
+- 🎨 Beautiful, cohesive theme and UI
+- 🔧 Simple, well-organized structure for easy customization
 
-Before you start, make sure you have:
+---
 
-- Neovim 0.9+ installed
-- Git installed
-- A Nerd Font installed (recommended: JetBrains Mono or FiraCode)
-- Optional: ripgrep, fd, lazygit, and node.js for some plugins
+## 📋 Requirements
 
-## Install Neovim
+| Requirement | Notes |
+|---|---|
+| **Neovim 0.9+** | Core editor |
+| **Git** | For cloning and plugin management |
+| **A Nerd Font** | Recommended: `JetBrainsMono Nerd Font` or `FiraCode Nerd Font` |
+| **ripgrep, fd, lazygit, Node.js** | Optional — enables extra plugin features |
 
-### Ubuntu / Debian
+---
 
+## 🚀 Installation
+
+### 1. Install Neovim
+
+**Ubuntu**
 ```bash
 sudo apt update
 sudo apt install neovim git
 ```
 
-### Arch Linux
-
+**Arch Linux**
 ```bash
 sudo pacman -S neovim git
 ```
 
-## Install a Nerd Font
+### 2. Install a Nerd Font
 
-Download and install a Nerd Font such as:
+Download one of the following and set it as your terminal font:
 
-- JetBrainsMono Nerd Font
-- FiraCode Nerd Font
-- CaskaydiaCove Nerd Font
+- [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
+- [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads)
+- [CaskaydiaCove Nerd Font](https://www.nerdfonts.com/font-downloads)
 
-Then set it in your terminal app.
-
-## Setup LazyVim
-
-1. Back up your current Neovim config if you already have one:
+### 3. Back up your existing config *(if any)*
 
 ```bash
 mv ~/.config/nvim ~/.config/nvim.bak 2>/dev/null
@@ -59,63 +58,72 @@ mv ~/.local/state/nvim ~/.local/state/nvim.bak 2>/dev/null
 mv ~/.cache/nvim ~/.cache/nvim.bak 2>/dev/null
 ```
 
-2. Clone this repository as your Neovim config:
+### 4. Clone this config
 
 ```bash
 git clone https://github.com/LazyVim/starter ~/.config/nvim
-rm -rf ~/.config/nvim/.git
-```
+rm -rf ~/.config/nvim/.git```
 
-If this project is already in your local folder, you can also copy the config into `~/.config/nvim`.
-
-3. Open Neovim:
+### 5. Launch Neovim
 
 ```bash
 nvim
 ```
 
-4. LazyVim will automatically install plugins and dependencies.
+LazyVim will automatically install plugins and dependencies on first launch. Wait for the process to finish, then restart Neovim.
 
-5. Wait until the installation finishes, then restart Neovim.
+---
 
-## Recommended commands
+## 🧭 Recommended Commands
 
-Inside Neovim:
+| Command | Description |
+|---|---|
+| `:Lazy` | Open the plugin manager |
+| `:Mason` | Install LSPs, linters, and formatters |
+| `:checkhealth` | Diagnose your editor setup |
+| `:Telescope find_files` | Search files in project |
+| `:Telescope live_grep` | Search text across project |
+| `:Oil` | Open the file explorer |
 
-- `:Lazy` - open Lazy plugin manager
-- `:Mason` - install LSPs and formatters
-- `:checkhealth` - check your editor setup
-- `:Telescope find_files` - search files
-- `:Telescope live_grep` - search text in project
-- `:Oil` - file explorer
+---
 
-## Useful default keybindings
+## ⌨️ Default Keybindings
 
-- `<leader>ff` - find files
-- `<leader>fg` - live grep
-- `<leader>fb` - buffers
-- `<leader>e` - file explorer
-- `<leader>w` - save
-- `<leader>q` - quit
-- `<leader>h` - help
+| Keybinding | Action |
+|---|---|
+| `<leader>ff` | Find files |
+| `<leader>fg` | Live grep |
+| `<leader>fb` | List buffers |
+| `<leader>e` | Toggle file explorer |
+| `<leader>w` | Save file |
+| `<leader>q` | Quit |
+| `<leader>h` | Open help |
 
-## Customizing the config
+---
 
-Edit files inside the config folder such as:
+## 🛠️ Customization
 
-- `lua/config/options.lua`
-- `lua/config/keymaps.lua`
-- `lua/plugins/`
+All custom configuration lives in a few key files:
 
-To add your own plugins or change settings, edit these files and reload Neovim with:
+```
+lua/
+├── config/
+│   ├── options.lua   # Editor options
+│   └── keymaps.lua   # Custom keybindings
+└── plugins/          # Plugin specs
+```
 
-```bash
+After making changes, sync your plugins:
+
+```
 :Lazy sync
 ```
 
-## Troubleshooting
+---
 
-If something does not work:
+## 🩺 Troubleshooting
+
+If something isn't working:
 
 ```bash
 nvim
@@ -123,14 +131,10 @@ nvim
 :Lazy
 ```
 
-Common fixes:
-
+**Common fixes:**
 - Reinstall missing dependencies
-- Update Neovim
-- Check if your font is installed
-- Reopen the editor after plugin install
+- Update Neovim to the latest version
+- Confirm your Nerd Font is installed and set in your terminal
+- Restart the editor after plugin installs
 
-
-## Notes
-
-This repository is a starter setup for a powerful Neovim environment using LazyVim. You can customize it to match your workflow as you learn more about Neovim.
+---

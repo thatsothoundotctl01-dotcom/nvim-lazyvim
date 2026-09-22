@@ -1,8 +1,32 @@
-# 💤 Neovim 
+# Neovim
 
-A clean and modern Neovim configuration based on [LazyVim](https://www.lazyvim.org/).
+A focused [LazyVim](https://www.lazyvim.org/) configuration for a fast, polished editing workflow.
 
-Designed to make coding faster and more comfortable — with a polished UI, curated plugins, and a smooth day-to-day workflow.
+The configuration is intentionally small and easy to change. Plugin specs are grouped by purpose, while LazyVim continues to provide the base editor experience.
+
+![Neovim dashboard](nvim.png)
+
+## Structure
+
+```text
+~/.config/nvim/
+├── init.lua
+├── lazy-lock.json
+├── lazyvim.json
+├── stylua.toml
+└── lua/
+	├── config/
+	│   ├── autocmds.lua
+	│   ├── keymaps.lua
+	│   ├── lazy.lua
+	│   └── options.lua
+	└── plugins/
+		├── colorscheme.lua
+		├── disabled.lua
+		├── editor.lua
+		├── example.lua.bak
+		└── ui.lua
+```
 
 
 ## ✨ Features
@@ -61,8 +85,10 @@ mv ~/.cache/nvim ~/.cache/nvim.bak 2>/dev/null
 ### 4. Clone this config
 
 ```bash
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-rm -rf ~/.config/nvim/.git```
+git clone https://github.com/your-username/your-nvim-config.git ~/.config/nvim
+```
+
+Replace the URL with your GitHub repository URL. If the repository already exists locally, copy or link it to `~/.config/nvim` instead.
 
 ### 5. Launch Neovim
 
@@ -103,14 +129,20 @@ LazyVim will automatically install plugins and dependencies on first launch. Wai
 
 ## 🛠️ Customization
 
-All custom configuration lives in a few key files:
+All custom configuration lives in a few focused files:
 
 ```
 lua/
 ├── config/
-│   ├── options.lua   # Editor options
-│   └── keymaps.lua   # Custom keybindings
-└── plugins/          # Plugin specs
+│   ├── autocmds.lua   # Autocommands
+│   ├── keymaps.lua    # Custom keybindings
+│   ├── lazy.lua       # Plugin manager bootstrap
+│   └── options.lua    # Editor options
+└── plugins/
+	├── colorscheme.lua # Themes
+	├── disabled.lua    # Disabled defaults
+	├── editor.lua      # Editing, LSP, and tools
+	└── ui.lua          # Dashboard and interface
 ```
 
 After making changes, sync your plugins:
@@ -138,3 +170,4 @@ nvim
 - Restart the editor after plugin installs
 
 ---
+#update readme 

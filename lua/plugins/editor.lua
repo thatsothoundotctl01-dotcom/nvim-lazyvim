@@ -53,4 +53,4 @@ return {
     opts = { ensure_installed = { "clangd", "clang-format", "pyright", "ruff", "black", "typescript-language-server", "prettier", "eslint-lsp", "html-lsp", "css-lsp", "json-lsp", "yaml-language-server", "bash-language-server", "lua-language-server", "stylua", "rust-analyzer", "gopls", "gofumpt", "jdtls", "intelephense", "dockerfile-language-server", "tailwindcss-language-server", "kotlin-language-server", "ruby-lsp", "zls", "cmakelang", "cmakelint", "shfmt", "shellcheck", "sql-formatter" } },
   },
   { "saghen/blink.cmp", opts = { completion = { documentation = { auto_show = true, auto_show_delay_ms = 200 }, menu = { auto_show = true } }, sources = { default = { "lsp", "path", "snippets", "buffer" } } } },
-}
+}#update 

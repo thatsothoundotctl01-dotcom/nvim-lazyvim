@@ -7,4 +7,4 @@ return {
     "sphamba/smear-cursor.nvim",
     enabled = false,
   },
-}
+}disable

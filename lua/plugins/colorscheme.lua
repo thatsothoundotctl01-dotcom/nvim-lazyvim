@@ -118,3 +118,4 @@ return {
 		priority = 1000,
 	},
 
+# colorscheme

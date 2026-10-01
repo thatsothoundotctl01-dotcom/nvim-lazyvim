@@ -57,12 +57,12 @@ The configuration is intentionally small and easy to change. Plugin specs are gr
 **Ubuntu**
 ```bash
 sudo apt update
-sudo apt install neovim git
+sudo apt install neovim -y
 ```
 
 **Arch Linux**
 ```bash
-sudo pacman -S neovim git
+sudo pacman -S neovim -y
 ```
 
 ### 2. Install a Nerd Font
@@ -85,7 +85,8 @@ mv ~/.cache/nvim ~/.cache/nvim.bak 2>/dev/null
 ### 4. Clone this config
 
 ```bash
-git clone https://github.com/your-username/your-nvim-config.git ~/.config/nvim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
 ```
 
 Replace the URL with your GitHub repository URL. If the repository already exists locally, copy or link it to `~/.config/nvim` instead.
@@ -170,4 +171,5 @@ nvim
 - Restart the editor after plugin installs
 
 ---
-#update readme 
+#Update 
+update readme 
